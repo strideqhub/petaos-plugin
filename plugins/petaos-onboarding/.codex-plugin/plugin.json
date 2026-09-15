@@ -1,7 +1,7 @@
 {
   "name": "petaos-onboarding",
-  "version": "0.1.1",
-  "description": "Multilingual customer onboarding and workflow guidance for the existing PETAOS website. English is the default, with Thai and Chinese support.",
+  "version": "0.1.2",
+  "description": "Multilingual PETAOS discovery for unregistered prospects and role-based training or authorized workflow help for registered tenants.",
   "author": {
     "name": "PETAOS"
   },
@@ -9,14 +9,14 @@
   "interface": {
     "displayName": "PETAOS Customer Onboarding",
     "shortDescription": "PETAOS onboarding in English, Thai, or Chinese.",
-    "longDescription": "Twenty-one skills provide training and task guidance across 20 PETAOS applications. Responses follow the user's language and default to English. The plugin uses browser capabilities supplied by the host and provides manual steps when none are available. It includes no account, business API, or browser. End-to-end business workflows remain pending acceptance testing.",
+    "longDescription": "Unregistered prospects receive scenario discovery, module recommendations, workflow examples, and efficiency opportunities from public PETAOS information. Registered tenants receive a live capability map, role-based training, guided practice, and authorized workflow help across 20 applications. Responses follow the user's language and default to English. Browser capabilities are supplied by the host; end-to-end business workflows remain pending acceptance testing.",
     "developerName": "PETAOS",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "Use $petaos-start to teach me PETAOS. Start with creating an approval workflow without submitting business data.",
-      "Use $petaos-start to open PETAOS and check which applications I can access.",
-      "Use $petaos-start to show me the PayLink entry point and prerequisites."
+      "Use $petaos-start to recommend the right PETAOS modules for my business scenario. I do not have a tenant yet.",
+      "Use $petaos-start to assess what my registered PETAOS tenant can do and create a role-based training plan.",
+      "Use $petaos-start to guide me through an authorized tenant task and verify the result."
     ]
   }
 }

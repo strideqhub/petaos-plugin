@@ -1,4 +1,4 @@
 interface:
   display_name: "PETAOS Customer Onboarding"
   short_description: "PETAOS onboarding in English, Thai, or Chinese"
-  default_prompt: "Use $petaos-start to teach me PETAOS, starting with an approval workflow without submitting business data."
+  default_prompt: "Use $petaos-start to recommend PETAOS modules for my scenario, or train me in my existing tenant if I am already registered."

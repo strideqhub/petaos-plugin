@@ -1,4 +1,4 @@
-# PETAOS Customer Onboarding Plugin | v0.1.1 Internal Preview
+# PETAOS Customer Onboarding Plugin | v0.1.2 Internal Preview
 
 [English](#english) · [中文](#中文) · [ไทย](#ไทย)
 
@@ -9,6 +9,8 @@
 A shared skills package for both Codex and Claude Code. It reuses the existing PETAOS website and does not introduce a second business UI or a new backend.
 
 The package contains 21 skills (one main entry and 20 applications), 354 menu/workbench operation cards, and 59 core training tasks. Every skill documents its entry point, prerequisites, steps, and completion evidence. See [PETAOS Start](plugins/petaos-onboarding/skills/petaos-start/SKILL.md) for the task catalog. These numbers describe documentation coverage; end-to-end acceptance is still 0/59 business workflows.
+
+The main entry supports two journeys: unregistered prospects receive scenario discovery, module recommendations, workflow examples, and efficiency opportunities from public PETAOS information; registered tenants receive a live capability map, role-based training, guided practice, and authorized execution support.
 
 ### 1. Prerequisites
 
@@ -32,7 +34,8 @@ codex plugin list --marketplace petaos --json
 After confirming that the plugin is installed and enabled, start a new task and enter:
 
 ```text
-Use $petaos-start to teach me PETAOS. First explain the entry point, prerequisites, and steps for creating a leave-approval template. Do not submit any business data.
+Prospect: Use $petaos-start to recommend the right PETAOS modules for my business. I do not have a tenant yet.
+Tenant: Use $petaos-start to assess what my PETAOS workspace can do and build a training plan for my role.
 ```
 
 For a local checkout, run `codex plugin marketplace add .` from the repository root instead. The package includes a native `.codex-plugin/plugin.json` manifest and follows the [OpenAI plugin packaging documentation](https://developers.openai.com/plugins/build/plugins). A new task is the reliable boundary for loading newly installed plugin content.
@@ -50,7 +53,8 @@ claude plugin list --json
 Start a new Claude Code session and enter:
 
 ```text
-/petaos-onboarding:petaos-start Teach me PETAOS. First explain how to create a leave-approval template, without submitting any business data.
+Prospect: /petaos-onboarding:petaos-start Recommend the right PETAOS modules for my business. I do not have a tenant yet.
+Tenant: /petaos-onboarding:petaos-start Assess what my PETAOS workspace can do and build a training plan for my role.
 ```
 
 For a one-time local test without installing user configuration:
@@ -67,6 +71,7 @@ Start with read-only learning, then move to an authorized rehearsal. [Validation
 
 | Scenario | Input / condition | Expected result |
 | --- | --- | --- |
+| Prospect discovery | “We have no tenant; recommend modules for our current workflow” | Summarizes the scenario, recommends one starting journey and minimum modules, explains efficiency opportunities and prerequisites, and stays on public information |
 | Learn a workflow | “Teach me to create leave approval; do not submit” | Opens BPM guidance without saving or publishing; explains the difference between saving, publishing, and starting an instance |
 | Open the website | Browser capability is available; “Open PETAOS” | Opens or reuses the actual page and reads the URL; the user completes sign-in |
 | No browser capability | The host provides no browser control | Clearly switches to manual guidance and never claims that it opened, clicked, or submitted anything |
@@ -128,6 +133,8 @@ Before wider release, complete browser-assisted validation and key business-flow
 
 本包包含 21 个技能（1 个总入口和 20 个应用）、354 个菜单/工作台入口操作卡、59 个核心培训任务。每个技能都写明入口、前置条件、操作步骤和完成依据；任务目录见 [PETAOS 总入口](plugins/petaos-onboarding/skills/petaos-start/SKILL.md)。这些数字代表资料覆盖量，59 个业务闭环的端到端验收目前仍为 0/59。
 
+总入口支持两条客户旅程：未注册客户通过公开资料进行场景诊断、模块推荐、流程示例和提效分析；已注册租户获得当前能力清单、角色化培训、陪练和授权范围内的执行帮助。
+
 ### 1. 安装前准备
 
 - 安装并登录 Codex 或 Claude Code。本次验证的 CLI 版本是 Codex 0.144.4 和 Claude Code 2.1.185，其他版本需要另行实测。
@@ -150,7 +157,8 @@ codex plugin list --marketplace petaos --json
 确认插件已安装并启用后，新建一个任务并输入：
 
 ```text
-使用 $petaos-start 带我学习 PETAOS，先讲解创建请假审批模板的入口、前置条件和步骤，不提交业务数据。
+未注册：使用 $petaos-start 根据我们的业务场景推荐 PETAOS 模块，我们还没有租户。
+已注册：使用 $petaos-start 评估当前 PETAOS 工作空间能做什么，并为我的角色制定培训计划。
 ```
 
 如果使用本地仓库，在仓库根目录改为运行 `codex plugin marketplace add .`。本包包含原生 `.codex-plugin/plugin.json` 清单，并遵循 [OpenAI 插件封装文档](https://developers.openai.com/plugins/build/plugins)。新任务是加载新安装插件内容的可靠边界。
@@ -168,7 +176,8 @@ claude plugin list --json
 新建 Claude Code 会话并输入：
 
 ```text
-/petaos-onboarding:petaos-start 带我学习 PETAOS，先讲解创建请假审批模板，不提交业务数据。
+未注册：/petaos-onboarding:petaos-start 根据我们的业务场景推荐 PETAOS 模块，我们还没有租户。
+已注册：/petaos-onboarding:petaos-start 评估当前 PETAOS 工作空间能做什么，并为我的角色制定培训计划。
 ```
 
 也可以只做一次本地试用，不写入用户配置：
@@ -185,6 +194,7 @@ claude --plugin-dir ./plugins/petaos-onboarding
 
 | 场景 | 输入/条件 | 预期结果 |
 | --- | --- | --- |
+| 未注册客户选型 | “我们还没有租户，请根据现有流程推荐模块” | 总结场景，推荐一个首选业务旅程和最小模块组合，说明提效机会与前置条件，并且只使用公开信息 |
 | 学习流程 | “教我创建请假审批，不提交” | 进入 BPM 指引，不保存、不发布；说明保存、发布和发起实例的区别 |
 | 打开网站 | 宿主浏览器可用；“打开 PETAOS” | 打开或复用真实页面并读取 URL；由用户完成登录 |
 | 无浏览器能力 | 宿主未提供浏览器控制 | 明确转为人工引导，不声称已经打开、点击或提交 |
@@ -246,6 +256,8 @@ claude plugin uninstall petaos-onboarding@petaos --scope user
 
 แพ็กเกจนี้มี 21 ทักษะ (ทางเข้าหลัก 1 รายการและแอปพลิเคชัน 20 รายการ), การ์ดขั้นตอนจากเมนู/เวิร์กเบนช์ 354 รายการ และงานฝึกอบรมหลัก 59 งาน ทุกทักษะระบุทางเข้า เงื่อนไขก่อนเริ่ม ขั้นตอน และหลักฐานว่างานเสร็จสมบูรณ์ ดูรายการงานได้ที่ [PETAOS Start](plugins/petaos-onboarding/skills/petaos-start/SKILL.md) ตัวเลขเหล่านี้แสดงขอบเขตของเอกสาร ส่วนการทดสอบกระบวนการธุรกิจแบบต้นทางถึงปลายทางยังอยู่ที่ 0/59
 
+ทางเข้าหลักรองรับลูกค้าสองกลุ่ม: ผู้ที่ยังไม่ได้ลงทะเบียนจะได้รับการวิเคราะห์สถานการณ์ คำแนะนำโมดูล ตัวอย่าง workflow และโอกาสเพิ่มประสิทธิภาพจากข้อมูลสาธารณะของ PETAOS ส่วน tenant ที่ลงทะเบียนแล้วจะได้รับแผนผังความสามารถจริง การฝึกอบรมตามบทบาท การฝึกทำ และความช่วยเหลือภายในขอบเขตที่อนุญาต
+
 ### 1. สิ่งที่ต้องเตรียม
 
 - ติดตั้งและเข้าสู่ระบบ Codex หรือ Claude Code เวอร์ชัน CLI ที่ตรวจสอบแล้วคือ Codex 0.144.4 และ Claude Code 2.1.185 ส่วนเวอร์ชันอื่นควรทดสอบแยกต่างหาก
@@ -268,7 +280,8 @@ codex plugin list --marketplace petaos --json
 เมื่อตรวจสอบแล้วว่าปลั๊กอินถูกติดตั้งและเปิดใช้งาน ให้เริ่มงานใหม่และป้อน:
 
 ```text
-ใช้ $petaos-start เพื่อสอนฉันใช้งาน PETAOS เริ่มจากอธิบายทางเข้า เงื่อนไขก่อนเริ่ม และขั้นตอนสร้างเทมเพลตการอนุมัติการลา โดยห้ามส่งข้อมูลธุรกิจ
+ยังไม่ได้ลงทะเบียน: ใช้ $petaos-start แนะนำโมดูล PETAOS ที่เหมาะกับกระบวนการธุรกิจของเรา เรายังไม่มี tenant
+ลงทะเบียนแล้ว: ใช้ $petaos-start ประเมินว่า workspace PETAOS ของเราทำอะไรได้บ้าง และสร้างแผนฝึกอบรมตามบทบาทของฉัน
 ```
 
 หากใช้ repository ในเครื่อง ให้รัน `codex plugin marketplace add .` จากโฟลเดอร์รากแทน แพ็กเกจนี้มี manifest แบบเนทีฟ `.codex-plugin/plugin.json` และเป็นไปตาม [เอกสารการจัดแพ็กเกจปลั๊กอินของ OpenAI](https://developers.openai.com/plugins/build/plugins) การเริ่มงานใหม่เป็นขอบเขตที่เชื่อถือได้สำหรับการโหลดเนื้อหาปลั๊กอินที่ติดตั้งใหม่
@@ -286,7 +299,8 @@ claude plugin list --json
 เริ่มเซสชัน Claude Code ใหม่และป้อน:
 
 ```text
-/petaos-onboarding:petaos-start สอนฉันใช้งาน PETAOS เริ่มจากอธิบายวิธีสร้างเทมเพลตการอนุมัติการลา โดยห้ามส่งข้อมูลธุรกิจ
+ยังไม่ได้ลงทะเบียน: /petaos-onboarding:petaos-start แนะนำโมดูล PETAOS ที่เหมาะกับกระบวนการธุรกิจของเรา เรายังไม่มี tenant
+ลงทะเบียนแล้ว: /petaos-onboarding:petaos-start ประเมินว่า workspace PETAOS ของเราทำอะไรได้บ้าง และสร้างแผนฝึกอบรมตามบทบาทของฉัน
 ```
 
 สำหรับการทดสอบในเครื่องเพียงครั้งเดียวโดยไม่ติดตั้งลงในการตั้งค่าผู้ใช้:
@@ -303,6 +317,7 @@ claude --plugin-dir ./plugins/petaos-onboarding
 
 | สถานการณ์ | ข้อมูลนำเข้า/เงื่อนไข | ผลลัพธ์ที่คาดหวัง |
 | --- | --- | --- |
+| การเลือกโมดูลสำหรับผู้ที่ยังไม่ลงทะเบียน | “เรายังไม่มี tenant โปรดแนะนำโมดูลจากกระบวนการปัจจุบัน” | สรุปสถานการณ์ แนะนำเส้นทางเริ่มต้นหนึ่งรายการและชุดโมดูลขั้นต่ำ อธิบายโอกาสเพิ่มประสิทธิภาพและสิ่งที่ต้องเตรียม โดยใช้เฉพาะข้อมูลสาธารณะ |
 | เรียนรู้กระบวนการ | “สอนฉันสร้างการอนุมัติการลา โดยห้ามส่ง” | เปิดคำแนะนำ BPM โดยไม่บันทึกหรือเผยแพร่ และอธิบายความแตกต่างระหว่างการบันทึก การเผยแพร่ และการเริ่ม instance |
 | เปิดเว็บไซต์ | มีความสามารถด้านเบราว์เซอร์; “เปิด PETAOS” | เปิดหรือใช้หน้าจริงที่มีอยู่และอ่าน URL โดยให้ผู้ใช้เข้าสู่ระบบเอง |
 | ไม่มีความสามารถด้านเบราว์เซอร์ | โฮสต์ไม่มีการควบคุมเบราว์เซอร์ | เปลี่ยนเป็นคำแนะนำแบบทำด้วยตนเองอย่างชัดเจน และไม่อ้างว่าได้เปิด คลิก หรือส่งข้อมูลแล้ว |

@@ -27,6 +27,8 @@ def check(root):
     files += [PLUGIN / name for name in (
         ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", "README.md",
         "skills/petaos-start/SKILL.md", "skills/petaos-start/agents/openai.yaml",
+        "skills/petaos-start/references/prospect-discovery.md",
+        "skills/petaos-start/references/tenant-onboarding.md",
         "skills/petaos-start/references/使用边界与验证状态.md",
     )]
     files += [PLUGIN / "skills" / ("petaos-" + module) / name
@@ -65,6 +67,8 @@ def check(root):
         require(re.search(r"^description: .+", skill, re.M), f"缺少描述: {name}")
         require(all(f"## {h}\n" in skill for h in ("入口", "前置条件", "操作步骤", "完成依据")), f"缺少操作结构: {name}")
         require("使用边界与验证状态.md" in skill, f"缺少验证边界: {name}")
+    start = docs[PLUGIN / "skills/petaos-start/SKILL.md"]
+    require(all(name in start for name in ("prospect-discovery.md", "tenant-onboarding.md")), "总入口缺少双客户旅程")
     links = 0
     pages, tasks = [], []
     for path, body in docs.items():

@@ -1,7 +1,7 @@
 {
   "name": "petaos-onboarding",
-  "version": "0.1.1",
-  "description": "Multilingual customer onboarding and workflow guidance for the existing PETAOS website. English is the default, with Thai and Chinese support.",
+  "version": "0.1.2",
+  "description": "Multilingual PETAOS discovery for unregistered prospects and role-based training or authorized workflow help for registered tenants.",
   "author": { "name": "PETAOS" },
   "keywords": ["petaos", "onboarding", "training", "english", "thai", "bpm", "erp"]
 }
