@@ -1,0 +1,22 @@
+{
+  "name": "petaos-onboarding",
+  "version": "0.1.0",
+  "description": "PETAOS 客户培训与现有页面操作导航，包含 20 个业务技能和总入口；浏览器能力由宿主提供。内部试用版。",
+  "author": {
+    "name": "PETAOS"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PETAOS 客户培训助手",
+    "shortDescription": "复用现有网站，学习入口、前置条件、步骤和完成依据。",
+    "longDescription": "21 个技能覆盖 20 个应用的操作培训与任务导航。使用宿主已有浏览器能力；没有浏览器时提供人工操作步骤。不内置账号、业务 API 或浏览器。业务全链路尚未验收，仅限内部试用。",
+    "developerName": "PETAOS",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "使用 $petaos-start 带我学习 PETAOS，先讲如何创建审批流程，不提交业务。",
+      "使用 $petaos-start 打开 PETAOS，检查我当前能使用哪些应用。",
+      "使用 $petaos-start 帮我定位收款链接入口和所需前置条件。"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PETAOS 入门导航"
+  short_description: "PETAOS 网站培训与任务导航：核对入口、权限、步骤和完成依据"
+  default_prompt: "使用 $petaos-start 带我学习 PETAOS，先介绍如何创建审批流程，不提交业务。"

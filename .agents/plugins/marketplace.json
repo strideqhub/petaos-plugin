@@ -1,0 +1,20 @@
+{
+  "name": "petaos",
+  "interface": {
+    "displayName": "PETAOS 内部试用插件"
+  },
+  "plugins": [
+    {
+      "name": "petaos-onboarding",
+      "source": {
+        "source": "local",
+        "path": "./plugins/petaos-onboarding"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
