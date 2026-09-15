@@ -32,9 +32,12 @@ def check(root):
     files += [PLUGIN / "skills" / ("petaos-" + module) / name
               for module in MODULES for name in ("SKILL.md", "references/操作手册.md")]
     for path in root.rglob("*"):
-        require(not path.is_symlink(), f"禁止符号链接: {path.relative_to(root)}")
-        if path.is_file() and path.relative_to(root).parts[0] != "dist":
-            require(path.relative_to(root) in files, f"非发布白名单文件: {path.relative_to(root)}")
+        relative = path.relative_to(root)
+        if relative.parts[0] in {".git", "dist"}:
+            continue
+        require(not path.is_symlink(), f"禁止符号链接: {relative}")
+        if path.is_file():
+            require(relative in files, f"非发布白名单文件: {relative}")
     require(all((root / p).is_file() for p in files), "发布包缺文件")
     docs = {p: (root / p).read_text(encoding="utf-8") for p in files}
     codex = json.loads(docs[PLUGIN / ".codex-plugin/plugin.json"])
