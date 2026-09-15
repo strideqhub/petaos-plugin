@@ -1,6 +1,6 @@
 ---
 name: petaos-paylink
-description: 在 PETAOS 现有网站引导和办理收款 PayLink任务，用于收款人员、销售、财务的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS PayLink tasks on the existing website. Use for English, Thai, or Chinese requests about payment links, incoming payments, settlement, withdrawal, invoicing, and delivery.
 ---
 
 # 收款 PayLink

@@ -1,6 +1,6 @@
 ---
 name: petaos-proof
-description: 在 PETAOS 现有网站引导和办理现场取证任务，用于现场主管、巡检人员、售后人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS field-evidence tasks on the existing website. Use for English, Thai, or Chinese requests about projects, locations, photos, attendance, warranties, and claims.
 ---
 
 # 现场取证

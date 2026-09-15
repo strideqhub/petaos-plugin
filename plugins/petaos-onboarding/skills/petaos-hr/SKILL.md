@@ -1,6 +1,6 @@
 ---
 name: petaos-hr
-description: 在 PETAOS 现有网站引导和办理人力资源任务，用于HR、部门主管、员工的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS HR tasks on the existing website. Use for English, Thai, or Chinese requests about employees, attendance, leave, expenses, payroll, and onboarding SOPs.
 ---
 
 # 人力资源

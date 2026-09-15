@@ -1,6 +1,6 @@
 ---
 name: petaos-mes
-description: 在 PETAOS 现有网站引导和办理MES 系统任务，用于生产计划员、车间、质检、设备人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS MES tasks on the existing website. Use for English, Thai, or Chinese requests about routing, work orders, scheduling, materials, reporting, quality, and equipment.
 ---
 
 # MES 系统

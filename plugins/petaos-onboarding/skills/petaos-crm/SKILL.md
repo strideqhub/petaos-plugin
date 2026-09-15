@@ -1,6 +1,6 @@
 ---
 name: petaos-crm
-description: 在 PETAOS 现有网站引导和办理CRM 系统任务，用于销售、销售主管、客户成功的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS CRM tasks on the existing website. Use for English, Thai, or Chinese requests about leads, customers, opportunities, contracts, collections, and e-signatures.
 ---
 
 # CRM 系统

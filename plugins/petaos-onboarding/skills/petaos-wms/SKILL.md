@@ -1,6 +1,6 @@
 ---
 name: petaos-wms
-description: 在 PETAOS 现有网站引导和办理WMS 系统任务，用于仓库管理员、收发货和盘点人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS WMS tasks on the existing website. Use for English, Thai, or Chinese requests about warehouses, inbound, outbound, transfers, stocktakes, and inventory.
 ---
 
 # WMS 系统

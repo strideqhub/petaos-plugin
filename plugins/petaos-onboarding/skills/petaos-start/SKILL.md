@@ -1,6 +1,6 @@
 ---
 name: petaos-start
-description: 引导客户打开 PETAOS 现有网站、学习系统、定位业务入口，并按授权范围操作和核验结果。用于初次入门、不知道选哪个应用、跨应用培训，以及创建审批流程前的导航；具体业务转交对应 PETAOS 技能。
+description: Guide customers through the existing PETAOS website, choose the correct app, explain workflows, perform authorized actions, and verify results. Use for onboarding and cross-app requests in English, Thai, or Chinese.
 ---
 
 # PETAOS 入门导航

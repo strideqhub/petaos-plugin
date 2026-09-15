@@ -1,7 +1,7 @@
 {
   "name": "petaos-onboarding",
-  "version": "0.1.0",
-  "description": "PETAOS 客户培训与现有页面操作导航，包含 20 个业务技能和总入口；浏览器能力由宿主提供。内部试用版。",
+  "version": "0.1.1",
+  "description": "Multilingual customer onboarding and workflow guidance for the existing PETAOS website. English is the default, with Thai and Chinese support.",
   "author": { "name": "PETAOS" },
-  "keywords": ["petaos", "onboarding", "training", "bpm", "erp"]
+  "keywords": ["petaos", "onboarding", "training", "english", "thai", "bpm", "erp"]
 }

@@ -1,6 +1,6 @@
 ---
 name: petaos-mail
-description: 在 PETAOS 现有网站引导和办理邮件协作任务，用于邮箱管理员、协作主管的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS mail tasks on the existing website. Use for English, Thai, or Chinese requests about domains, mailboxes, seats, delivery channels, and mail rules.
 ---
 
 # 邮件协作

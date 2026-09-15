@@ -1,6 +1,6 @@
 ---
 name: petaos-eas
-description: 在 PETAOS 现有网站引导和办理电子防盗任务，用于门店防损员、设备管理员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS electronic article surveillance tasks on the existing website. Use for English, Thai, or Chinese requests about devices, security tags, alarms, and deactivation.
 ---
 
 # 电子防盗

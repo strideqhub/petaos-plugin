@@ -1,7 +1,7 @@
 {
   "name": "petaos",
   "interface": {
-    "displayName": "PETAOS 内部试用插件"
+    "displayName": "PETAOS Customer Onboarding"
   },
   "plugins": [
     {

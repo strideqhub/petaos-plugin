@@ -1,6 +1,6 @@
 ---
 name: petaos-system
-description: 在 PETAOS 现有网站引导和办理系统管理任务，用于企业管理员、实施人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS system administration tasks on the existing website. Use for English, Thai, or Chinese requests about organizations, users, roles, permissions, plans, and custom fields.
 ---
 
 # 系统管理

@@ -1,6 +1,6 @@
 ---
 name: petaos-mall
-description: 在 PETAOS 现有网站引导和办理商城系统任务，用于商城运营、订单客服的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS Mall tasks on the existing website. Use for English, Thai, or Chinese requests about products, orders, after-sales service, refunds, promotions, and customer support.
 ---
 
 # 商城系统

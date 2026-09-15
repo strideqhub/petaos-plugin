@@ -1,6 +1,6 @@
 ---
 name: petaos-erp
-description: 在 PETAOS 现有网站引导和办理ERP 系统任务，用于采购、销售、财务、仓储主管的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS ERP tasks on the existing website. Use for English, Thai, or Chinese requests about purchasing, sales, commercial documents, and related finance operations.
 ---
 
 # ERP 系统

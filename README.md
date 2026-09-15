@@ -1,4 +1,4 @@
-# PETAOS Customer Onboarding Plugin | v0.1.0 Internal Preview
+# PETAOS Customer Onboarding Plugin | v0.1.1 Internal Preview
 
 [English](#english) · [中文](#中文) · [ไทย](#ไทย)
 
@@ -13,6 +13,7 @@ The package contains 21 skills (one main entry and 20 applications), 354 menu/wo
 ### 1. Prerequisites
 
 - Install and sign in to Codex or Claude Code. The verified CLI versions are Codex 0.144.4 and Claude Code 2.1.185. Other versions should be tested separately.
+- The assistant follows the language of the latest user request. English and Thai are the primary languages, Chinese is also supported, and unclear requests default to English. Observed UI labels remain unchanged so users can match the real page.
 - Keep the complete package, including hidden directories such as `.agents`, `.claude-plugin`, and `.codex-plugin`. Do not copy only `SKILL.md` files.
 - This plugin provides skills and manuals; it does **not install a browser**. To let the assistant open, read, and operate the PETAOS website, the host must provide and authorize browser/computer-control capabilities. Opening a link does not necessarily mean the assistant can read the page.
 - Without a browser tool, learning still works through explicit manual guidance. Real operations require a PETAOS account, the correct organization, the required role, and clear authorization.
@@ -130,6 +131,7 @@ Before wider release, complete browser-assisted validation and key business-flow
 ### 1. 安装前准备
 
 - 安装并登录 Codex 或 Claude Code。本次验证的 CLI 版本是 Codex 0.144.4 和 Claude Code 2.1.185，其他版本需要另行实测。
+- 助手跟随用户最新请求的语言；优先支持英文和泰文，同时兼容中文，无法判断时默认英文。实际页面标签保留原文，便于用户与真实界面对照。
 - 保留完整插件包，包括 `.agents`、`.claude-plugin`、`.codex-plugin` 等隐藏目录；不要只复制 `SKILL.md`。
 - 插件只提供技能和手册，**不会安装浏览器**。如果希望助手打开、读取和操作 PETAOS 网站，宿主必须提供并授权浏览器/电脑操作能力。只能打开链接不代表助手能够读取页面。
 - 没有浏览器工具时仍可通过明确的人工步骤学习。真实业务操作还需要 PETAOS 账号、正确企业、相应角色和明确授权。
@@ -247,6 +249,7 @@ claude plugin uninstall petaos-onboarding@petaos --scope user
 ### 1. สิ่งที่ต้องเตรียม
 
 - ติดตั้งและเข้าสู่ระบบ Codex หรือ Claude Code เวอร์ชัน CLI ที่ตรวจสอบแล้วคือ Codex 0.144.4 และ Claude Code 2.1.185 ส่วนเวอร์ชันอื่นควรทดสอบแยกต่างหาก
+- ผู้ช่วยจะตอบตามภาษาของคำขอล่าสุด โดยเน้นภาษาอังกฤษและภาษาไทย รองรับภาษาจีน และใช้ภาษาอังกฤษเป็นค่าเริ่มต้นเมื่อระบุภาษาไม่ได้ ป้ายชื่อที่อ่านจากหน้าจริงจะคงข้อความเดิมไว้เพื่อให้ผู้ใช้ค้นหาได้ถูกต้อง
 - เก็บแพ็กเกจให้ครบ รวมถึงโฟลเดอร์ซ่อน เช่น `.agents`, `.claude-plugin` และ `.codex-plugin` อย่าคัดลอกเฉพาะไฟล์ `SKILL.md`
 - ปลั๊กอินนี้ให้เฉพาะทักษะและคู่มือ และ **ไม่ได้ติดตั้งเบราว์เซอร์** หากต้องการให้ผู้ช่วยเปิด อ่าน และควบคุมเว็บไซต์ PETAOS โฮสต์ต้องมีและอนุญาตความสามารถในการควบคุมเบราว์เซอร์/คอมพิวเตอร์ การเปิดลิงก์ได้ไม่ได้หมายความว่าจะอ่านหน้าเว็บได้เสมอไป
 - หากไม่มีเครื่องมือเบราว์เซอร์ ยังเรียนรู้ผ่านคำแนะนำแบบทีละขั้นตอนได้ การทำงานจริงต้องมีบัญชี PETAOS เลือกองค์กรที่ถูกต้อง มีบทบาทที่จำเป็น และได้รับอนุญาตอย่างชัดเจน

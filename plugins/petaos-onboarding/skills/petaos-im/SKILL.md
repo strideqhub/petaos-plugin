@@ -1,6 +1,6 @@
 ---
 name: petaos-im
-description: 在 PETAOS 现有网站引导和办理Enterprise Messenger任务，用于企业成员、内部协作人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS Enterprise Messenger tasks on the existing website. Use for English, Thai, or Chinese requests about internal conversations and collaboration.
 ---
 
 # Enterprise Messenger

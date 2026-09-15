@@ -1,6 +1,6 @@
 ---
 name: petaos-ai
-description: 在 PETAOS 现有网站引导和办理AI 大模型任务，用于业务使用者、知识管理员、AI 管理员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS AI tasks on the existing website. Use for English, Thai, or Chinese requests about models, knowledge bases, conversations, content generation, and AI workflows.
 ---
 
 # AI 大模型

@@ -1,6 +1,6 @@
 ---
 name: petaos-integration
-description: 在 PETAOS 现有网站引导和办理第三方集成任务，用于集成管理员、实施人员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS integration tasks on the existing website. Use for English, Thai, or Chinese requests about Google, webhooks, and bank or government adapters.
 ---
 
 # 第三方集成

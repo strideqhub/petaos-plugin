@@ -1,6 +1,6 @@
 ---
 name: petaos-finance
-description: 在 PETAOS 现有网站引导和办理云会计任务，用于财务人员、财务主管的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS accounting tasks on the existing website. Use for English, Thai, or Chinese requests about expenses, reconciliation, reports, budgets, and fixed assets.
 ---
 
 # 云会计

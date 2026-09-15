@@ -1,6 +1,6 @@
 ---
 name: petaos-pay
-description: 在 PETAOS 现有网站引导和办理支付管理任务，用于支付运维、财务管理员的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS payment operations on the existing website. Use for English, Thai, or Chinese requests about payment orders, callbacks, refunds, transfers, and wallets.
 ---
 
 # 支付管理

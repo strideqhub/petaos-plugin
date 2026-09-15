@@ -1,6 +1,6 @@
 ---
 name: petaos-member
-description: 在 PETAOS 现有网站引导和办理会员中心任务，用于会员运营、客服的操作培训、页面定位和业务结果核验。
+description: Guide and verify PETAOS member-center tasks on the existing website. Use for English, Thai, or Chinese requests about member profiles, tiers, check-ins, points, and balances.
 ---
 
 # 会员中心
