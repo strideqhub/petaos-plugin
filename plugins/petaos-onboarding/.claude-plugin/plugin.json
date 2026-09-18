@@ -1,6 +1,6 @@
 {
   "name": "petaos-onboarding",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Multilingual PETAOS discovery for unregistered prospects and role-based training or authorized workflow help for registered tenants.",
   "author": { "name": "PETAOS" },
   "keywords": ["petaos", "onboarding", "training", "english", "thai", "bpm", "erp"]

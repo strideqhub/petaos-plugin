@@ -1,4 +1,4 @@
-# PETAOS Customer Onboarding Plugin | v0.1.2 Internal Preview
+# PETAOS Customer Onboarding Plugin | v0.1.3 Internal Preview
 
 [English](#english) · [中文](#中文) · [ไทย](#ไทย)
 
